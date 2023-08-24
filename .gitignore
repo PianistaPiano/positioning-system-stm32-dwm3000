@@ -1,0 +1,13 @@
+.metadata/
+Debug/
+
+.cproject
+.project
+*.xml
+*.html
+*.chm
+.settings
+test.txt
+
+
+
