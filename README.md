@@ -1,0 +1,49 @@
+# positioning-system-stm32-dwm3000
+This repo is for 2D and 3D positioning system based on DWM3000 and various version of STM32 Nucleo: G431KB, L432KC, F303K8. 
+App which shows real time visualization of positioning system was made using MATLAB ver. 2022a.
+**This is prototype, not for profesional use.**
+
+# Important informations
+This project was created as part of my Master's Thesis at the Silesian University of Technology.
+System works on raw data, I do not use filters or algorithms to stabilize and improve accuracy of position.
+In the system we can use 4 reference points or 6 reference points.
+
+# Getting started
+## Tasks in the system for STM32
+In the system are 3 main tasks:
+* Initiator
+* Responder
+* get message
+
+During project I had 4x L432KC, 3x F303K8 and 3x G431KB <br>
+Three L432KC do task Initiator (modules located on the object which is positioning) <br>
+All three F303K8, two G431KB and one L432KC do task Responder (reference points).
+One G431KB do task get message (module connected to the PC).
+
+### Methodology of addresing modules
+Responder: 1A, 2B, 3C, 4D, 5E, 6F <br>
+Initiator: EV, FV, GV <br>
+get message: CP <br>
+
+## Import projects
+At first you must create STM32CubeIDE Workspace. Then in the workspace folder clone a repository.
+
+![obraz](https://github.com/PianistaPiano/positioning-system-stm32-dwm3000/assets/76052736/f67bcc53-3d34-40f1-9a4f-2257f0c28bd5)
+
+In next step import projects to the STM32CubeIDE. 
+
+![obraz](https://github.com/PianistaPiano/positioning-system-stm32-dwm3000/assets/76052736/e2ac5558-aadb-4d6a-98fd-1c9617bb3adc)
+
+
+System is based on simple example of DS_TWR from Qorvo (ds_twr_initiator_sts.c and ds_twr_responder_sts.c). 
+
+**DWM_Examples** - this project is configured for STM32 G431KB <br>
+**DWM_Examples_F303K8** - this project is configured for STM32 F303K8 <br>
+**DWM_Examples_L432KC** - this project is configured for STM32 L432KC <br>
+**DWM_Examples_getMsg** - this project is configured for STM32 G431KB <br>
+
+# Load and configure program to the STM32
+
+For example if you want flash task Initator on the L432KC with addres EV do this:
+
+1. Open project DWM_Examples_L432KC
