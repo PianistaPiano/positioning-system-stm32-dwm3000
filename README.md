@@ -44,6 +44,45 @@ System is based on simple example of DS_TWR from Qorvo (ds_twr_initiator_sts.c a
 
 # Load and configure program to the STM32
 
-For example if you want flash task Initator on the L432KC with addres EV do this:
+For example if you want load task Initator on the L432KC with addres GV do this:
 
 1. Open project DWM_Examples_L432KC
+2. Go to Core->Inc->example_selection.h
+3. Choose define TEST_DS_TWR_INITIATOR_STS and change INITIATOR_TYPE to 'G' <br>
+![obraz](https://github.com/PianistaPiano/positioning-system-stm32-dwm3000/assets/76052736/2b872fc0-68f8-4274-957f-94a641c1b8a5) <br>
+4. Open examples->ex_05a_ds_twr_init->ds_twr_initiator_sts.c
+5. In define NUMBER_OF_ANCHORS choose 6 or 4 anchors.
+6. Load program to the L432KC <br>
+
+For example if you want load task Responder on the G431KB with addres 3C do this:
+
+1. Open project DWM_Examples
+2. Go to Core->Inc->example_selection.h
+3. Choose define TEST_DS_TWR_RESPONDER_STS and change ANCHOR_TYPE to 'C' <br>
+![obraz](https://github.com/PianistaPiano/positioning-system-stm32-dwm3000/assets/76052736/c13c37a4-c224-4a4c-acea-22526ee13032) <br>
+4. Open examples->ex_05b_ds_twr_resp->ds_twr_responder_sts.c
+5. Load program to the G431KB
+
+To load task get message:
+
+1. Open project DWM_Examples_getMsg
+2. Go to examples->ex_get_msg_form_anchors->ex_get_msg_form_anchors.c
+3. In define NUMBER_OF_ANCHORS choose 6 or 4 anchors.
+4. Load program to the G431KB
+
+# MATLAB App
+To open app corectly you need MATLAB 2022a or higher.
+## How to use?
+1. Choose 2D or 3D positioning.
+2. Enter number of anchors (4 or 6)
+3. Enter positions of anchors
+4. Enter room size
+5. Choose serial port where "get message" device is connected
+6. You can save entered informations to txt file (yellow button)
+7. You can load file with settings (txt file must be in the same place where app files)
+8. If everything is connected and turn on you can start positioning
+
+# WARNING
+If you want improve accuracy you must calibrate antena delay and PG Delay on every DWM3000 module.
+
+
