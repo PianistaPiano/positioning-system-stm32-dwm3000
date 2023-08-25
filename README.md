@@ -80,7 +80,10 @@ To open app corectly you need MATLAB 2022a or higher.
 5. Choose serial port where "get message" device is connected
 6. You can save entered informations to txt file (yellow button)
 7. You can load file with settings (txt file must be in the same place where app files)
-8. If everything is connected and turn on you can start positioning
+8. If everything is connected and turn on you can start positioning <br>
+
+![obraz](https://github.com/PianistaPiano/positioning-system-stm32-dwm3000/assets/76052736/429978b0-4923-43ae-b76e-f8f668ffbc81)
+
 
 # WARNING
 If you want improve accuracy you must calibrate antena delay and PG Delay on every DWM3000 module.
