@@ -84,6 +84,8 @@ To open app corectly you need MATLAB 2022a or higher.
 
 ![obraz](https://github.com/PianistaPiano/positioning-system-stm32-dwm3000/assets/76052736/429978b0-4923-43ae-b76e-f8f668ffbc81)
 
+# How it works
+Youtube Link: https://youtu.be/k65Hiws79ng
 
 # WARNING
 If you want improve accuracy you must calibrate antena delay and PG Delay on every DWM3000 module.
